@@ -7,6 +7,9 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+    <context:component-scan base-package="org.example"/>
+
 <!--    <context:property-placeholder location = "classpath:musicPlayer.properties"/>-->
 
 <!--    <bean id = "musicClassicalBean"-->
@@ -16,12 +19,12 @@
 <!--          class = "org.example.RockMusic">-->
 <!--    </bean>-->
 
-    <bean id="musicBean"
-          class="org.example.ClassicalMusic"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy"
-          factory-method="getClassicalMusic">
-    </bean>
+<!--    <bean id="musicBean"-->
+<!--          class="org.example.ClassicalMusic"-->
+<!--          init-method="doMyInit"-->
+<!--          destroy-method="doMyDestroy"-->
+<!--          factory-method="getClassicalMusic">-->
+<!--    </bean>-->
 
 <!--    <bean id = "musicPlayer"-->
 <!--          class = "org.example.MusicPlayer">-->

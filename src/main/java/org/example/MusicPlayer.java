@@ -19,9 +19,9 @@ public class MusicPlayer {
     }
 
     public void playMusic() {
-        for (var tmp: musicList)
-            System.out.println("Playing: " + tmp.getMusic());
-        //System.out.println("Playing: " + music.getMusic());
+//        for (var tmp: musicList)
+//            System.out.println("Playing: " + tmp.getMusic());
+        System.out.println("Playing: " + music.getMusic());
     }
 
     public void setMusicList(List<Music> musicList) {
