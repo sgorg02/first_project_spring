@@ -9,26 +9,32 @@
 
 <!--    <context:property-placeholder location = "classpath:musicPlayer.properties"/>-->
 
-    <bean id = "musicClassicalBean"
-          class = "org.example.ClassicalMusic">
-    </bean>
-    <bean id = "musicRockBean"
-          class = "org.example.RockMusic">
+<!--    <bean id = "musicClassicalBean"-->
+<!--          class = "org.example.ClassicalMusic">-->
+<!--    </bean>-->
+<!--    <bean id = "musicRockBean"-->
+<!--          class = "org.example.RockMusic">-->
+<!--    </bean>-->
+
+    <bean id="musicBean"
+          class="org.example.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic">
     </bean>
 
+<!--    <bean id = "musicPlayer"-->
+<!--          class = "org.example.MusicPlayer">-->
+<!--&lt;!&ndash;        <property name = "musicList" ref = "musicClassicalBean"/>&ndash;&gt;-->
+<!--        <property name = "musicList">-->
+<!--            <list>-->
+<!--                <ref bean = "musicRockBean"/>-->
+<!--                <ref bean = "musicClassicalBean"/>-->
+<!--            </list>-->
+<!--        </property>-->
 
-    <bean id = "musicPlayer"
-          class = "org.example.MusicPlayer">
-<!--        <property name = "musicList" ref = "musicClassicalBean"/>-->
-        <property name = "musicList">
-            <list>
-                <ref bean="musicRockBean"/>
-                <ref bean="musicClassicalBean"/>
-            </list>
-        </property>
-
-<!--        <property name = "music" ref = "musicBean"/>-->
-<!--        <property name = "name" value="${musicPlayer.name}"/>-->
-<!--        <property name = "volume" value = "${musicPlayer.volume}"/>-->
-    </bean>
+<!--&lt;!&ndash;        <property name = "music" ref = "musicBean"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name = "name" value="${musicPlayer.name}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name = "volume" value = "${musicPlayer.volume}"/>&ndash;&gt;-->
+<!--    </bean>-->
 </beans>
